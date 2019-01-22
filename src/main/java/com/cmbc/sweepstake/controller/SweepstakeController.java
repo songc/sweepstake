@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController(value = "/sweepstake")
+@RestController
+@RequestMapping(value = "/sweepstake")
 public class SweepstakeController {
 
     private SweepstakeService sweepstakeService;

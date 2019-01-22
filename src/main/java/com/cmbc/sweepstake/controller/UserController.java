@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController(value = "/user")
+@RestController
 public class UserController {
     private UserDAO userDAO;
 
@@ -19,7 +19,7 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "register")
+    @PostMapping(value = "/user/register")
     public User register(@RequestBody User user) {
         return userDAO.save(user);
     }
