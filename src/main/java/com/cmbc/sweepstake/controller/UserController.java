@@ -18,6 +18,11 @@ public class UserController {
         this.userDAO = userDAO;
     }
 
+    @GetMapping(value = "/user")
+    public List<User> getAllUser() {
+        return userDAO.findAll();
+    }
+
 
     @PostMapping(value = "/user/register")
     public User register(@RequestBody User user) {

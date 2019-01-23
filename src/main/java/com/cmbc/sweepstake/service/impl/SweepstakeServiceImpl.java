@@ -13,7 +13,7 @@ public class SweepstakeServiceImpl implements SweepstakeService {
     @Override
     public List<User> sweepstake(List<User> userList, int num) throws Exception {
         if (num > userList.size()) {
-            throw new Exception();
+            throw new Exception("抽奖人数大于参与人数");
         } else if (num == userList.size()) {
             return userList;
         }
